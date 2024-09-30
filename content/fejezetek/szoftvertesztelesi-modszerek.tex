@@ -1,8 +1,37 @@
 \section{Szoftvertesztelési módszerek}
+A szoftvertesztelés a fejlesztési folyamat elengedhetetlen része, ami biztosítja a szoftver minőségét, megbízhatóságát és hibamentességét.
+A tesztelési folyamat célja, hogy azonosítsa a hibákat és problémákat a rendszerben, mielőtt azok a felhasználókhoz eljutnának.
+A különböző tesztelési módszerek használata lehetővé teszi, hogy a szoftverfejlesztők és tesztelők átfogó képet kapjanak a szoftver működéséről és teljesítményéről, csökkentve ezzel a potenciális hibák kockázatát, és javítva a szoftver minőségét a megvalósítás minden szakaszában.
 \subsection{Végrehajtó szerint csoportosítva}
+A szoftvertesztelési módszerek végrehajtójuk szerint két kategóriába sorolható: manuális és automatizált tesztelés.
+Mindkét módszer különböző előnyökkel és hátrányokkal rendelkezik, és a megfelelő alkalmazásuk nagyban hozzájárul a tesztelési folyamat hatékonyságához és eredményességéhez.
 \subsubsection{Manuális tesztelés}
+A manuális tesztelés során a tesztelők közvetlenül, emberi interakcióval hajtják végre a különböző tesztelési feladatokat, anélkül, hogy automatizált eszközöket használnának.
+Ebben az esetben a tesztelő személyesen végigmegy a szoftver különböző funkcióin, ellenőrzi a felhasználói felületet, a működési logikát és a különböző folyamatokat.
+A manuális tesztelés előnye, hogy rugalmas, és a tesztelők könnyen alkalmazkodhatnak a változó körülményekhez, valamint képesek olyan hibákat is felfedezni, amelyeket esetleg egy automatizált teszt nem venne észre.
+Ugyanakkor hátránya az, hogy időigényes és nagyobb mértékben függ a tesztelő tapasztalatától, ami miatt hajlamosabb lehet az emberi hibákra.
 \subsubsection{Automata tesztelés}
+Az automata tesztelés során a tesztelési folyamatokat szoftvereszközök segítségével automatizálják, amelyek előre írt szkriptek alapján végzik el a tesztelési feladatokat.
+Ez a módszer lehetővé teszi a nagy mennyiségű teszt gyors és ismételhető lefuttatását, ami különösen hasznos, ha rendszeresen ugyanazokat a funkciókat kell tesztelni, például regressziós tesztelés esetén.
+Az automata tesztelés előnye, hogy jelentősen csökkenti a manuális munkaigényt, növeli a pontosságot és az ismételhetőséget, valamint gyorsabb eredményeket biztosít, különösen nagyobb rendszerek esetén.
+Hátránya azonban, hogy a tesztek megírása kezdetben időigényes lehet, és a tesztelés folyamatos karbantartást igényel, különösen, ha a szoftverben gyakran történnek változtatások.
 \subsection{Érintett modulok szerint csoportosítva}
-\subsubsection{Egysegteszt (Unit test)}
+A tesztelési módszereket csoportosíthatjuk az érintett modulok alapján. Ide tartozik a unit tesztelés, az integrációs tesztelés és az end-to-end tesztelés.
+Ezek a szintek eltérő mélységben és területeken vizsgálják a szoftver működését, a kódegységektől kezdve a komponensek együttműködésén át a teljes rendszer átfogó teszteléséig.
+A különböző szintek kombinációja lehetővé teszi a szoftver alapos ellenőrzését, különböző nézőpontokból biztosítva annak helyes működését.
+\subsubsection{Egységteszt (Unit test)}
+A unit tesztelés a szoftvertesztelés legalapvetőbb szintje, amelynek célja, hogy a legkisebb, önálló kódegységeket, vagy más néven egységeket külön-külön teszteljük.
+Ezek az egységek általában egy-egy függvényt vagy metódust takarnak, és a tesztelés során azt vizsgáljuk, hogy az adott egység rendeltetésszerűen működik-e.
+A unit tesztek izoláltak, vagyis függetlenek a rendszer többi részétől, így a tesztelés során az esetleges külső függőségeket mock vagy stub objektumokkal helyettesítjük.
+A unit tesztelés előnye, hogy segít a hibák korai felfedezésében és javításában, még a fejlesztési folyamat kezdeti fázisában, ezáltal költséghatékony és időtakarékos megoldás a szoftverminőség biztosítására.
 \subsubsection{Integrációs teszt (Integration test)}
+Az integrációs tesztelés célja, hogy a különálló modulok vagy egységek közötti kapcsolatokat és együttműködést ellenőrizze. Míg a unit tesztelés az egyes egységek helyes működésére fókuszál, 
+az integrációs tesztelés azt vizsgálja, hogy ezek az egységek hogyan működnek együtt, és helyesen kommunikálnak-e egymással.
+Az integrációs tesztek segítségével felismerhetők azok a hibák, amelyek akkor jelentkeznek, amikor a modulok közötti interfészek vagy adatok nem megfelelően kerülnek továbbításra. 
+Ez a tesztelési szint kulcsfontosságú, mivel a szoftver különböző részei gyakran különböző fejlesztők munkájának eredményeként jönnek létre, így elengedhetetlen biztosítani, hogy a különböző komponensek integrációja hibátlanul működjön.
 \subsubsection{Végponttól végpontig tartó teszt (End-to-end test)}
+Az end-to-end (E2E) tesztelés a szoftvertesztelés legátfogóbb szintje, amelynek célja, hogy a teljes rendszert a felhasználói perspektívából vizsgálja.
+Az E2E tesztek során az alkalmazás különböző funkcióit úgy tesztelik, mintha a felhasználó a rendszer elejétől a végéig lépne át a folyamatokon.
+Ez magában foglalja a frontend és backend komponensek, adatbázisok, külső szolgáltatások és a rendszer más részeinek együttműködésének ellenőrzését is.
+Az end-to-end tesztelés segít biztosítani, hogy a rendszer összes komponense helyesen integrálódjon, és az alkalmazás egészében megfelelően működjön, beleértve a felhasználói felületet, a tranzakciókat és az adatkezelést.
+Bár ezek a tesztek idő- és erőforrásigényesebbek, nélkülözhetetlenek a felhasználói élmény és az üzleti folyamatok hibamentes biztosításához.
